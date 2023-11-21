@@ -3780,7 +3780,7 @@ vite-tsconfig-paths@^4.2.1:
 
 vite@^5.0.0:
   version "5.0.0"
-  resolved "https://registry.npmjs.org/vite/-/vite-5.0.0.tgz"
+  resolved "https://registry.yarnpkg.com/vite/-/vite-5.0.0.tgz#3bfb65acda2a97127e4fa240156664a1f234ce08"
   integrity sha512-ESJVM59mdyGpsiNAeHQOR/0fqNoOyWPYesFto8FFZugfmhdHx8Fzd8sF3Q/xkVhZsyOxHfdM7ieiVAorI9RjFw==
   dependencies:
     esbuild "^0.19.3"
