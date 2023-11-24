@@ -1,39 +1,47 @@
 import React from 'react';
 import { SectionContainer } from '@styles/globalStyle';
 import styled from 'styled-components';
+import ScreenStarWrapper from './ScreenStarWrapper';
 
+import boxOfficeGrade1Img from '../../assets/image/boxoffice/boxOfficeGrade1Img.png';
 export default function ScreenStar() {
   return (
     <ScreenStarContainer>
-      <ScreenStarTitle>이 작품이 담긴 컬렉션</ScreenStarTitle>
+      <ScreenStarHeader>동시 상영작 별점</ScreenStarHeader>
       <ShowScreenStar>
         <ScreenStarWrapper 
-        imgSrc={}
+        listNumber="1."
+        imgSrc={boxOfficeGrade1Img}
         title="프레디의 피자 가게"
-        rate={2.0}
+        rate={2.1}
         />
         <ScreenStarWrapper 
-        imgSrc={}
+        listNumber="2."
+        imgSrc={boxOfficeGrade1Img}
         title="헝거게임: 노래하는 새와 뱀의 발라드"
         rate={3.4}
         />
         <ScreenStarWrapper 
-        imgSrc={}
+        listNumber="3."
+        imgSrc={boxOfficeGrade1Img}
         title="더 마블스"
         rate={3.4}
         />
         <ScreenStarWrapper 
-        imgSrc={}
+        listNumber="4."
+        imgSrc={boxOfficeGrade1Img}
         title="30일"
         rate={3.2}
         />
         <ScreenStarWrapper 
-        imgSrc={}
+        listNumber="5."
+        imgSrc={boxOfficeGrade1Img}
         title="테일러 스위프트 더 에라스 투어"
         rate={3.4}
         />
         <ScreenStarWrapper 
-        imgSrc={}
+        listNumber="6."
+        imgSrc={boxOfficeGrade1Img}
         title="소년들"
         rate={2.9}
         />                        
@@ -42,29 +50,22 @@ export default function ScreenStar() {
   );
 };
 
-{
-  /* <MovieArticle
-  imgSrc={BoxOfficeGrade6Img}
-  title="마녀 배달부 키키"
-  rate={3.8}
-  subInfo="감독, 각본"
-  tag={['가족', '애니메이션']}
-/> */
-}
 const ScreenStarContainer = styled(SectionContainer)`
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  flex-direction:column;
   height: 50.8rem;
   gap: 3.5rem;
+  background-color: yellow;
+  padding: 5.5rem 5.9rem 5.5rem 5.9rem
   //border-bottom: 1px solid ${({ theme }) => theme.colors.grey300};
 `;
-const ScreenStarTitle = styled.h2`
-  ${({ theme }) => theme.fonts.title1};
-  size: 2.4rem;
+const ScreenStarHeader = styled.p`
+  ${({ theme }) => theme.fonts.title1}; 
+  line-height: .4rem;
 `
 const ShowScreenStar = styled.section`
   display: flex;
   height: 33rem;
   width: 123rem;
+  gap:1rem;
 `

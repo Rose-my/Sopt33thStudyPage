@@ -31,7 +31,7 @@ function FONT({ weight, size, lineHeight = 1 }: InFONTProps) {
 }
 
 const fonts = {
-  largeTitle: FONT({ weight: 700, size: 3.6 }),
+  largeTitle: FONT({ weight: 800, size: 3.6 }),
   title1: FONT({ weight: 700, size: 2.4 }),
   title2: FONT({ weight: 700, size: 2.4 }),
   title3: FONT({ weight: 400, size: 2.4 }),
@@ -39,10 +39,12 @@ const fonts = {
   subTitle1: FONT({ weight: 700, size: 2 }),
   subTitle2: FONT({ weight: 700, size: 1.8 }),
   subTitle3: FONT({ weight: 500, size: 1.8 }),
+
   subTitle4: FONT({ weight: 700, size: 1.6 }),
   subTitle5: FONT({ weight: 500, size: 1.6 }),
   subTitle160: FONT({ weight: 500, size: 1.6, lineHeight: 1.6 }),
   subTitle6: FONT({ weight: 400, size: 1.6 }),
+  subTitle7: FONT({ weight: 500, size: 3.5 }),
   body1: FONT({ weight: 700, size: 1.4 }),
   body2: FONT({ weight: 500, size: 1.4 }),
   body2160: FONT({ weight: 500, size: 1.4, lineHeight: 1.6 }),

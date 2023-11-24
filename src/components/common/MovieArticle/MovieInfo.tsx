@@ -1,20 +1,21 @@
 import styled from 'styled-components';
-import castDetailLikeIc from '@assets/icon/watcha/watchaListStarIc.svg';
 
 interface InMovieArticleProps {
   title: string;
   rate: number;
+  keyword: string;
+  icon? : string;
   subInfo?: string;
 }
 
 /** each movie info  */
-export default function MovieInfo({ title, rate, subInfo }: InMovieArticleProps) {
+export default function MovieInfo({ keyword, icon, title, rate, subInfo }: InMovieArticleProps) {
   return (
     <ArticleInfoBox>
       <ArticleTitle>{title}</ArticleTitle>
       <ArticleRateText>
-        <span>평균</span>
-        <img src={castDetailLikeIc} />
+        <span>{keyword}</span>
+        {icon && <img src={icon}/>} 
         <span>{rate}</span>
       </ArticleRateText>
       {subInfo && <p>{subInfo}</p>}
@@ -25,15 +26,15 @@ export default function MovieInfo({ title, rate, subInfo }: InMovieArticleProps)
 const ArticleInfoBox = styled.div`
   ${({ theme }) => theme.fonts.body3};
 
-  color: ${({ theme }) => theme.colors.grey600};
   line-height: 2rem;
+  color: ${({ theme }) => theme.colors.grey600};
 `;
 
 const ArticleTitle = styled.h3`
   ${({ theme }) => theme.fonts.subTitle5};
 
-  color: ${({ theme }) => theme.colors.black};
   line-height: 2.3rem;
+  color: ${({ theme }) => theme.colors.black};
 `;
 
 const ArticleRateText = styled.p`

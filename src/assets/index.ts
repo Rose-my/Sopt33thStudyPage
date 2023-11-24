@@ -34,7 +34,7 @@ export { ReactComponent as BannerProfileIc } from './icon/banner/bannerProfileIc
 // export { ReactComponent as BodyStarFillIc } from './icon/body/bodyStarFillIc.svg';
 // export { ReactComponent as BodyStarHalfIc } from './icon/body/bodyStarHalfIc.svg';
 
-// export { ReactComponent as BoxOfficeStarIc } from './icon/boxOffice/boxOfficeStarIc.svg';
+  export { ReactComponent as BoxOfficeStarIc } from './icon/boxOffice/boxOfficeStarIc.svg';
 
 // export { ReactComponent as CastDetailLikeIc } from './icon/cast/castDetail/castDetailLikeIc.svg';
 

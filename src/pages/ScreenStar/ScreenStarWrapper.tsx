@@ -1,9 +1,10 @@
 import styled from 'styled-components';
+import ScreenStarDescriptions from './ScreenStarDescriptions';
 // import MovieTag from './MovieTag';
 // import MovieInfo from './MovieInfo';
 
 interface InScreenStarPropsTypes {
-  listNumber : number;
+  listNumber : string;
   imgSrc: string;
   title: string;
   rate: number;
@@ -21,23 +22,20 @@ export default function ScreenStarWrapper({
   imgHeight = 21.6,
 }: InScreenStarPropsTypes) {
   return (
-    <ArticleContainer>
-      <ScreenStarNum p={listNumber}/>
-      <ScreenStarImage src={imgSrc} imgWidth={imgWidth} imgHeight={imgHeight} />
-      <ScreenStarDetail title={title} rate={rate}/>
-    </ArticleContainer>
+    <ScreenStarBox>
+      <ScreenStarGrade>{listNumber}</ScreenStarGrade>
+      <ScreenStarDescriptions imgSrc={imgSrc} title={title} rate={rate} imgWidth={imgWidth} imgHeight={imgHeight}/>
+    </ScreenStarBox>
   );
 }
 
-const ArticleContainer = styled.article`
+const ScreenStarBox = styled.article`
   display: flex;
-  flex-direction: column;
-  gap: 1rem;
+  width: 19.8rem;
+  height: 29.3rem;
   align-items: flex-start;
-  justify-content: center;
+  gap: 1rem;
 `;
-
-const ScreenStarImage = styled.img<InScreenStarPropsTypes>`
-  width: ${({ imgWidth }) => `${imgWidth}rem`};
-  height: ${({ imgHeight }) => `${imgHeight}rem`};
-`;
+const ScreenStarGrade = styled.span`
+  ${({ theme }) => theme.fonts.title1};
+`

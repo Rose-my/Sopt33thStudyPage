@@ -8,8 +8,8 @@ export default function HeaderLeft() {
   return (
     <HeaderContainerLeft>
       <button>
-        <img src={watchaLogoIc} />
-      </button>
+        <img src={watchaLogoIc} /> 
+      </button> 
       <HeaderNav />
     </HeaderContainerLeft>
   );
