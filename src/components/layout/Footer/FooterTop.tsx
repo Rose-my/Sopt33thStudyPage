@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import footerStarIc from '@assets/icon/footer/footerStarIc.svg';
+import footerStarIc from '@assets/icon/footer/footerStarIc.svg?react';
 
 /** footer top section */
 export default function FooterTop() {
@@ -18,11 +18,11 @@ export default function FooterTop() {
 const FooterTopBox = styled.div`
   ${({ theme }) => theme.fonts.subTitle2};
 
-  width: 100%;
-  padding: 1.6rem 0;
   border-bottom: 1px solid ${({ theme }) => theme.colors.grey700};
-  color: ${({ theme }) => theme.colors.grey400};
+  padding: 1.6rem 0;
+  width: 100%;
   text-align: center;
+  color: ${({ theme }) => theme.colors.grey400};
 `;
 
 const FooterStrongText = styled.strong`

@@ -1,4 +1,3 @@
-import React from 'react'
 import { SectionContainer } from '@styles/globalStyle';
 import BoxOfficeHeader from './BoxOfficeHeader';
 import BoxOfficeArticle  from './BoxOfficeArticle';
@@ -17,8 +16,7 @@ export default function BoxOffice() {
 const Section = styled(SectionContainer)`
   display: flex;
   flex-direction:column;
-  height: 50.8rem;
-  gap: 3.5rem;
-  background-color: yellow;
+  gap: 3.5rem; 
   padding: 5.5rem 5.9rem 5.5rem 5.9rem;
+  height: 50.8rem;
 `;

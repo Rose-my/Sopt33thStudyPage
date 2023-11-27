@@ -1,29 +1,14 @@
+import { RouterProvider } from 'react-router-dom';
 import { ThemeProvider } from 'styled-components';
-import Header from '@components/layout/Header/Header';
-import Footer from '@components/layout/Footer/Footer';
+import { router } from 'Router';
 import GlobalStyle from '@styles/globalStyle';
 import theme from '@styles/theme';
-import ScreenStar from '@pages/ScreenStar/ScreenStar';
-import Collection from '@pages/Collection/Collection';
-import Similar from '@pages/Similar/Similar';
-import CommentSummary from '@pages/CommentSummary/CommentSummary';
-import Casts from '@pages/Casts/Casts';
-import Main from '@pages/Main/Main';
-import Thumbnail from '@pages/Thumbnail';
-import BoxOffice from '@components/boxOffice/boxOffice';
 
 function App() {
   return (
     <ThemeProvider theme={theme}>
+      <RouterProvider router={router} />
       <GlobalStyle />
-      <Header />
-      <Thumbnail/>
-      <Main/>
-      <Casts/>
-      <CommentSummary/>
-      <Collection/>
-      <Similar/>
-      <Footer />
     </ThemeProvider>
   );
 }

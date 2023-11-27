@@ -1,8 +1,8 @@
+import React from "react";
 import styled from 'styled-components';
-import BoxOfficeWrapperDescriptions from './BoxOfficeWrapperDescriptions';
-
-interface InBoxOfficePropsTypes {
-  WrapperNumber : string;
+import BoxOfficeWrapperDescription from './BoxOfficeWrapperDescription';
+interface InBoxOfficeMoviesProps {
+  wrapperNumber : string;
   imgSrc: string;
   title: string;
   rate: number;
@@ -10,30 +10,30 @@ interface InBoxOfficePropsTypes {
   imgHeight: number;
 }
 
-/** each movie info  */
+/** each BoxOffice info  */
 export default function BoxOfficeWrapper({
-  WrapperNumber,
+  wrapperNumber,
   imgSrc,
   title,
   rate,
   imgWidth = 15,
   imgHeight = 21.6,
-}: InBoxOfficePropsTypes) {
+}: InBoxOfficeMoviesProps): JSX.Element{
 
-  return (
+  return ( 
     <WrapperContents>
-      <Grade>{WrapperNumber}</Grade>
-      <BoxOfficeWrapperDescriptions imgSrc={imgSrc} title={title} rate={rate} imgWidth={imgWidth} imgHeight={imgHeight}/>
+      <Grade>{wrapperNumber}</Grade>
+      <BoxOfficeWrapperDescription imgSrc={imgSrc} title={title} rate={rate} imgWidth={imgWidth} imgHeight={imgHeight}/>
     </WrapperContents>
   );
 }
 
 const WrapperContents = styled.article`
   display: flex;
+  gap: 1rem;
+  align-items: flex-start;
   width: 19.8rem;
   height: 29.3rem;
-  align-items: flex-start;
-  gap: 1rem;
 `;
 
 const Grade = styled.span`
